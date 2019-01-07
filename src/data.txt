@@ -1,4 +1,4 @@
-people: 2000
+iterations_count: 2000
 age: 1, 2, 3, 4, 5
 gender: 1, 2
 temper: 0, 1
