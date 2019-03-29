@@ -51,12 +51,25 @@ def generate_data(params):
         result = []
 
         for key, value in params.items():
+            # first parameter is iteration count
             if key == COUNT_KEY:
                 del params[key]
-            if isinstance(value, list):
-                result.append(random.choice(value))
-            else:
-                result += value
+            elif isinstance(value, list) and len(value) > 1:
+                # take a number from a diapason
+                if value[-1] == "DI": # int numbers needed
+                    start = int(value[0])
+                    stop = int(value[1])
+                    result.append(random.randrange(start, stop))
+                elif value[-1] == "DF": # float numbers needed
+                    start = float(value[0])
+                    stop = float(value[1])
+                    result.append(round(random.uniform(start, stop), 4))
+                # take a number from an array
+                elif value[-1] == "A":
+                    result.append(random.choice(value))
+            # take just a single number
+            elif isinstance(value, list) and len(value) == 1:
+                result += value     #value is a list
         data_string_array.append(result)
     return data_string_array
 
