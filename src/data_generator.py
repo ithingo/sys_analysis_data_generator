@@ -66,7 +66,7 @@ def generate_data(params):
                     result.append(round(random.uniform(start, stop), 4))
                 # take a number from an array
                 elif value[-1] == "A":
-                    result.append(random.choice(value))
+                    result.append(random.choice(value[:-1]))
             # take just a single number
             elif isinstance(value, list) and len(value) == 1:
                 result += value     #value is a list

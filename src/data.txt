@@ -1,8 +1,8 @@
-iterations_count: 20
-age: 18, 65, 1, DI
+iterations_count: 2000
+age: 18, 65, DI
 gender: 0, 1, A
-experience: 1, 10, 1, DI
-personality_problems: 1, 100, 0.1, DF
-overtiming_frequency: 1, 100, 1, DI
-feedback: 1, 100, 1, DI
-free_time: 1, 10, 1, DI
+experience: 1, 10, DI
+personality_problems: 1, 100, DF
+overtiming_frequency: 1, 100, DI
+feedback: 1, 100, DI
+free_time: 1, 10, DI
